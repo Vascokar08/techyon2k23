@@ -1,0 +1,202 @@
+#Home > div > header > div > div{
+    border-radius: 0px 0px 10px 10px;
+}
+/* rolling section */
+#RollingText {
+  background: transparent;
+  background-clip: border-box;
+  border:none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    overflow-x: hidden;
+    overflow-y:visible;
+    margin-top: 6%;
+    /* border:2px solid red; */
+    & img{
+      height: 100%;
+      width: auto;
+      margin:1%;
+      margin-top:1%;
+      /* aspect-ratio: 14/9; */
+      -o-object-fit: cover;
+         object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  
+  #RollingText h1 {
+    font-family: Noto Serif;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    animation: 200s T1Ani linear 0s infinite;
+  }
+  
+  /* #RollingText h2 {
+    font-family: Eleganto Sans;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 100px;
+    line-height: 90%;
+    animation: 140s linear  infinite T2Ani;
+  } */
+  
+  @media (min-width:1000px) {
+    #RollingText h1 {
+      font-family: Noto Serif;
+      font-size: 600px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 80%;
+      animation: 200s T1Ani linear 0s infinite;
+    }
+  
+    /* #RollingText h2 {
+      font-family: Eleganto Sans;
+      font-style: normal;
+      font-weight: 100;
+      font-size: 300px;
+      line-height: 90%;
+    } */
+  }
+  
+  @keyframes T1Ani {
+    0% {
+      translate: 0ch 0;
+    }
+  
+    100% {
+      translate: -1000% 0;
+    }
+  }
+  
+  @keyframes T2Ani {
+    0% {
+      translate: 0ch 0;
+    }
+  
+    100% {
+      translate: -1000% 0;
+    }
+  }
+
+
+
+  /* Reset some default styles */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+} */
+
+/* Basic styling for the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left h3,
+.footer-right h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-left p,
+.footer-right p {
+    margin-bottom: 10px;
+}
+
+/* Style the map container */
+#map {
+    width: 100%;
+    min-width:30vw;
+    height: 200px;
+    border: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+  /* ======================================   Fotter    ====================================== */
+  footer {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    padding-bottom:50px;
+    margin-bottom:0px;
+  }
+  
+  footer li {
+    color: #ddd;
+  }
+
+  
+  /* ======================================   Main view (intro) typing effect    ====================================== */
+  .typewriter-effect {
+    margin: auto;
+    margin-top:10%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    word-wrap: normal;
+    color:#ccc;
+    text-shadow:7px 5px 5px #222;
+  }
+  
+  .typewriter-effect > .text {
+    max-width: 0;
+    animation: typing 3s steps(var(--characters)) infinite;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+  }
+  
+  .typewriter-effect::after {
+    color:#80ed99;
+    content: " |";
+    animation: blink 1s infinite;
+    animation-timing-function: step-end;
+  }
+  
+  @keyframes typing {
+    75%,
+    100% {
+      max-width: calc(var(--characters) * 1ch);
+    }
+  }
+  
+  @keyframes blink {
+    0%,
+    75%,
+    100% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+  }
